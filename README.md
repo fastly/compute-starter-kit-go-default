@@ -1,4 +1,4 @@
-# Compute@Edge default starter kit for TinyGo
+# Default Starter Kit for Go
 
 [![Deploy to Fastly](https://deploy.edgecompute.app/button)](https://deploy.edgecompute.app/deploy)
 
@@ -14,7 +14,7 @@ Get to know the Fastly Compute@Edge environment with a basic starter that demons
 
 ## Understanding the code
 
-This starter is intentionally lightweight, and requires no dependencies aside from the [`"github.com/fastly/compute-sdk-go/fsthttp"`](https://github.com/fastly/compute-sdk-go) repo. It will help you understand the basics of processing requests at the edge using Fastly. This starter includes implementations of common patterns explained in our [using Compute@Edge](https://developer.fastly.com/learning/compute/javascript/) and [VCL migration](https://developer.fastly.com/learning/compute/migrate/) guides.
+This starter is intentionally lightweight, and requires no dependencies aside from the [`"github.com/fastly/compute-sdk-go/fsthttp"`](https://github.com/fastly/compute-sdk-go) repo. It will help you understand the basics of processing requests at the edge using Fastly. This starter includes implementations of common patterns explained in our [using Compute@Edge](https://developer.fastly.com/learning/compute/go/) and [VCL migration](https://developer.fastly.com/learning/compute/migrate/) guides.
 
 The starter doesn't require the use of any backends. Once deployed, you will have a Fastly service running on Compute@Edge that can generate synthetic responses at the edge.
 
