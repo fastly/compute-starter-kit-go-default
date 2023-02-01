@@ -6,3 +6,7 @@ description = "A basic starter kit that demonstrates routing, simple synthetic r
 language = "go"
 manifest_version = 2
 name = "Default starter for Go"
+service_id = ""
+
+[scripts]
+  build = "tinygo build -target=wasi -gc=conservative -o bin/main.wasm ./"

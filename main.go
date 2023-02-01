@@ -15,6 +15,8 @@ import (
 // synthetic responses.
 
 func main() {
+	// Log service version
+	fmt.Println("FASTLY_SERVICE_VERSION:", os.Getenv("FASTLY_SERVICE_VERSION"));
 	fsthttp.ServeFunc(func(ctx context.Context, w fsthttp.ResponseWriter, r *fsthttp.Request) {
 		// Filter requests that have unexpected methods.
 		if r.Method != "HEAD" && r.Method != "GET" {
