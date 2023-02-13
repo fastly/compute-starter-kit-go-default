@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 
 	"github.com/fastly/compute-sdk-go/fsthttp"
 )
