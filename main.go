@@ -20,7 +20,7 @@ func main() {
 	
 	fsthttp.ServeFunc(func(ctx context.Context, w fsthttp.ResponseWriter, r *fsthttp.Request) {
 		// Filter requests that have unexpected methods.
-		if r.Method != "HEAD" && r.Method != "GET" && r.Method != "PURGE" {
+		if r.Method == "POST" || r.Method == "PUT" || r.Method == "PATCH" || r.Method == "DELETE" {
 			w.WriteHeader(fsthttp.StatusMethodNotAllowed)
 			fmt.Fprintf(w, "This method is not allowed\n")
 			return
