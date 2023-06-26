@@ -18,7 +18,7 @@ This starter is intentionally lightweight, and requires no dependencies aside fr
 
 The starter doesn't require the use of any backends. Once deployed, you will have a Fastly service running on Compute@Edge that can generate synthetic responses at the edge.
 
-It is reccomended to use the [Fastly CLI](https://github.com/fastly/cli) for this template. The template uses the `fastly.toml` scripts, to allow for building the project using your installed TinyGo compiler. The Fastly CLI should also be used for serving and testing your build output, as well as deploying your finalized package!
+It is recommended to use the [Fastly CLI](https://github.com/fastly/cli) for this template. The template uses the `fastly.toml` scripts, to allow for building the project using your installed TinyGo compiler. The Fastly CLI should also be used for serving and testing your build output, as well as deploying your finalized package!
 
 ## Security issues
 
