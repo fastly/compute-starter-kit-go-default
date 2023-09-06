@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"os"
+
 	"github.com/fastly/compute-sdk-go/fsthttp"
 )
 
@@ -16,8 +17,8 @@ import (
 
 func main() {
 	// Log service version
-	fmt.Println("FASTLY_SERVICE_VERSION:", os.Getenv("FASTLY_SERVICE_VERSION"));
-	
+	fmt.Println("FASTLY_SERVICE_VERSION:", os.Getenv("FASTLY_SERVICE_VERSION"))
+
 	fsthttp.ServeFunc(func(ctx context.Context, w fsthttp.ResponseWriter, r *fsthttp.Request) {
 		// Filter requests that have unexpected methods.
 		if r.Method == "POST" || r.Method == "PUT" || r.Method == "PATCH" || r.Method == "DELETE" {
