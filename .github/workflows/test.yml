@@ -1,0 +1,22 @@
+on: pull_request
+name: Test
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Setup Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: 'stable'
+        check-latest: true
+    - name: Setup Fastly CLI
+      uses: fastly/compute-actions/setup@v5
+    - name: Build and test
+      uses: fastly/compute-actions/build@v5
+      with:
+        verbose: true

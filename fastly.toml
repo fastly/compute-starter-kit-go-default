@@ -6,3 +6,7 @@ description = "A basic starter kit that demonstrates routing, simple synthetic r
 language = "go"
 manifest_version = 3
 name = "Default starter for Go"
+
+[scripts]
+    env_vars = ["GOARCH=wasm", "GOOS=wasip1"]
+    build = "go build -o bin/main.wasm ."
