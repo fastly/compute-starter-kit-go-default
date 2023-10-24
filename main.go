@@ -29,7 +29,7 @@ func main() {
 
 		// If request is to the `/` path...
 		if r.URL.Path == "/" {
-			// Below are some common patterns for Compute@Edge services using TinyGo.
+			// Below are some common patterns for Compute services using TinyGo.
 			// Head to https://developer.fastly.com/learning/compute/go/ to discover more.
 
 			// Create a new request.
@@ -39,7 +39,7 @@ func main() {
 			// }
 
 			// Add request headers.
-			// req.Header.Set("Custom-Header", "Welcome to Compute@Edge!")
+			// req.Header.Set("Custom-Header", "Welcome to Compute!")
 			// req.Header.Set(
 			//   "Another-Custom-Header",
 			//   "Recommended reading: https://developer.fastly.com/learning/compute"
