@@ -10,3 +10,4 @@ name = "Default starter for Go"
 [scripts]
     env_vars = ["GOARCH=wasm", "GOOS=wasip1"]
     build = "go build -o bin/main.wasm ."
+    post_init = "go get github.com/fastly/compute-sdk-go@latest"
