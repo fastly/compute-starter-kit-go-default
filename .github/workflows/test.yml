@@ -16,6 +16,8 @@ jobs:
         check-latest: true
     - name: Setup Fastly CLI
       uses: fastly/compute-actions/setup@v5
+    - name: Update Go SDK
+      run: go get github.com/fastly/compute-sdk-go@latest
     - name: Build and test
       uses: fastly/compute-actions/build@v5
       with:
