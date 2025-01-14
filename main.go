@@ -1,12 +1,18 @@
 package main
 
 import (
+      _ "embed"
 	"context"
 	"fmt"
 	"os"
+        "bytes"
+        "io"
 
 	"github.com/fastly/compute-sdk-go/fsthttp"
 )
+
+//go:embed welcome-to-compute.html
+var welcomePage []byte
 
 // The entry point for your application.
 //
@@ -71,7 +77,7 @@ func main() {
 			// Send a default synthetic response.
 			w.Header().Set("Content-Type", "text/html; charset=utf-8")
 
-			fmt.Fprintln(w, `<iframe src="https://developer.fastly.com/compute-welcome" style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%"></iframe>`)
+			io.Copy(w, io.NopCloser(bytes.NewReader(welcomePage)))
 			return
 		}
 
