@@ -1,12 +1,12 @@
 package main
 
 import (
-      _ "embed"
+	"bytes"
 	"context"
+	_ "embed"
 	"fmt"
+	"io"
 	"os"
-        "bytes"
-        "io"
 
 	"github.com/fastly/compute-sdk-go/fsthttp"
 )
